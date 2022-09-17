@@ -1,9 +1,11 @@
-from turtle import title
+import jsonfield
 from django.db import models
 
-class CatalogItem(models.Model):
+# Create your models here.
+class Watchlist(models.Model):
     watched = models.BooleanField()
     title = models.TextField()
     rating = models.IntegerField()
     release_date = models.DateField()
     review = models.TextField()
+    the_json = jsonfield.JSONField()
